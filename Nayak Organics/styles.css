@@ -1,0 +1,123 @@
+/* Header */
+#header-placeholder {
+  position: fixed; /* Fix the placeholder to the top of the viewport */
+  top: 0; /* Stick to the top of the viewport */
+  left: 0;
+  width: 100%; /* Ensure it spans the full width of the page */
+  z-index: 1000; /* Place above other elements */
+  background-color: #00BF63; /* Match the header background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+header {
+    background-color: #00BF63;
+    padding: 1rem 2rem;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #0b0b0b;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+
+  /* Footer */
+
+  .end-section {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.end-section nav {
+    margin-bottom: 10px;
+}
+
+.end-section a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.end-section a:hover {
+    color: #388e3c;
+}
+
+.end-section p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Header */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 62px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 1rem 0;
+    }
+    .nav-links li a {
+      margin-left: 1rem;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+    /*Footer*/
+
+    .end-section a {
+        display: block; /* Stack headings on smaller screens */
+        margin: 0.5rem 0; /* Adjust spacing for stacked items */
+      }
+  }
